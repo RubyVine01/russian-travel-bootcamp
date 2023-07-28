@@ -1,9 +1,41 @@
 .header__lang-link {
   color: #fff;
-  text-align: right;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 28px;
   text-decoration: none;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .header__lang-link {
+    font-size: calc(24px - (768px - 100vw) * (6 / 448));
+    /*
+    Плавное изменение font-size
+    При изменеие разрешения с 768px до 320px (768px -  320px) = 448px
+    font-size уменьшается с 24px до 18px, разница составляет(24px - 18px) = 4px   
+    (6 / 448) - коэффициент изменения font-size при уменьшении разрешения на 1px
+    (768px - 100vw) - дельта, на которую изменилось разрешение
+    (768px - 100vw) * (6 / 448) - дельта, на которую изменился font-size
+    (24px - (768px - 100vw) * (6 / 448)) - величина font-size
+    */
+    line-height: calc(28px - (768px - 100vw) * (8 / 448));
+    /*
+    Плавное изменение line-height
+    При изменеие разрешения с 768px до 320px (768px -  320px) = 448px
+    line-height уменьшается с 28px до 20px, разница составляет(28px - 20px) = 4px   
+    (8 / 448) - коэффициент изменения line-height при уменьшении разрешения на 1px
+    (768px - 100vw) - дельта, на которую изменилось разрешение
+    (768px - 100vw) * (8 / 448) - дельта, на которую изменился line-height
+    (28px - (768px - 100vw) * (8 / 448)) - величина line-height
+    */
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header__lang-link {
+    font-size: 18px;
+    line-height: 20px;
+  }
 }
