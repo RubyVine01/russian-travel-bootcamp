@@ -6,25 +6,49 @@
   line-height: 58px;
   margin: 0;
   padding-top: 92px;
+  max-width: 690px;
 }
 
-
 @media screen and (max-width: 1024px) {
-    .intro__title {
-      padding-left: 48px;
-    }
+  .intro__title {
   }
-  
-  @media screen and (max-width: 768px) {
-    .intro {
-      max-width: 720px;
-      padding-left: 24px;
-    }
+}
+
+@media screen and (max-width: 768px) {
+  .intro__title {
+    padding-top: 88px;
+    max-width: 720px;
+    font-size: calc(54px - (768px - 100vw) * (22 / 448));
+       /*
+      Плавное изменение font-size
+      При изменеие разрешения с 768px до 320px (768px -  320px) = 448px
+      font-size уменьшается с 54px до 32px, разница составляет(54px - 32px) = 22px   
+      (22 / 448) - коэффициент изменения font-size при уменьшении разрешения на 1px
+      (768px - 100vw) - дельта, на которую изменилось разрешение
+      (768px - 100vw) * (22 / 448) - дельта, на которую изменился font-size
+      (54px - (768px - 100vw) * (22 / 448)) - величина font-size
+      */
+    line-height: calc(58px - (768px - 100vw) * (23 / 448));
+      /*
+      Плавное изменение line-height
+      При изменеие разрешения с 768px до 320px (768px -  320px) = 448px
+      line-height уменьшается с 58px до 35px, разница составляет(58px - 35px) = 23px   
+      (23 / 448) - коэффициент изменения line-height при уменьшении разрешения на 1px
+      (768px - 100vw) - дельта, на которую изменилось разрешение
+      (768px - 100vw) * (23 / 448) - дельта, на которую изменился fline-height
+      (58px - (768px - 100vw) * (23 / 448)) - величина line-height
+      */
+    
+    
   }
-  
-  @media screen and (max-width: 320px) {
-    .intro {
-      max-width: 284px;
-      padding-left: 16px;
-    }
+}
+
+@media screen and (max-width: 320px) {
+ .intintro__titlero {
+    {
+    max-width: 288px;
+    padding-top: 64px;
+    font-size: 32px;
+    line-height: 35px;
   }
+}
