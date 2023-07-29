@@ -22,9 +22,3 @@
   (28px - (768px - 100vw) * (12/ 448)) - величина отступа
   */
 }
-
-@media screen and (max-width: 320px) {
-  .header__lang-links {
-    padding-top: 14px;
-  }
-}

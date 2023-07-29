@@ -33,13 +33,12 @@
     (96px - (768px - 100vw) * (56 / 448)) - величина line-height
     */
     max-width: 720px;
+
   }
 }
 
 @media screen and (max-width: 320px) {
   .lead__title {
-    font-size: 40px;
-    line-height: 44px;
     max-width: 288px;
   }
 }

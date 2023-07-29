@@ -1,10 +1,37 @@
 .photo-grid {
   padding: 92px 48px 0;
-  width: 754px;
-  height: 671px;
   display: grid;
-  margin: 0;
-  grid-template-columns: repeat(4, 284px);
-  gap: 16px
-;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(284px, 1fr));
+  gap: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+  .photo-grid {
+    gap: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .photo-grid {
+    padding: calc(88px - (768px - 100vw) * (24/ 448)) 24px 0;
+    /*
+    Плавное изменение размера top padding
+    При изменении разрешения с 768px до 320px (768px -  320px) = 448px
+    top padding
+    top padding уменьшается с 88px до 64px, разница составляет(88px - 64px) = 24px
+    (24 / 448) - коэффициент изменения отступа при уменьшении разрешения на 1px
+    (768px - 100vw) - дельта, на которую изменилось разрешение
+    (768px - 100vw) * (24 / 448) - дельта, на которую изменился размер отступа
+    (88px - (768px - 100vw) * (24/ 448)) - величина отступа
+    */
+    gap: 16px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .photo-grid {
+    padding: 64px 16px 0;
+    gap: 12px;
+  }
 }
