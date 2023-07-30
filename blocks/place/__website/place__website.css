@@ -1,9 +1,28 @@
 .place__website {
-width: 456px;
-margin: 0;
-display: flex;
-flex-direction: column;
-justify-content: end;
-row-gap: 12px;
+  max-width: 456px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  row-gap: 12px;
+}
 
+@media screen and (max-width: 1024px) {
+  .place__website {
+    
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .place__website {
+    max-width: 352px;
+    row-gap: 25px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .place__website {
+    max-width: 280px;
+    padding:0 16px;
+  }
 }

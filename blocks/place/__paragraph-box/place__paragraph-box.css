@@ -1,7 +1,27 @@
 .place__paragraph-box {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    row-gap: 26px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 26px;
+  max-width: 484px;
+}
 
+@media screen and (max-width: 1024px) {
+  .place__paragraph-box {
+    max-width: 456px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .place__paragraph-box {
+    max-width: 352px;
+    row-gap: 25px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .place__paragraph-box {
+    max-width: 280px;
+    padding:0 16px;
+  }
 }
