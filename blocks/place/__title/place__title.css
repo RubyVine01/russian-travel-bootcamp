@@ -11,22 +11,22 @@
 @media screen and (max-width: 1024px) {
   .place__title {
     max-width: 440px;
+    font-size: calc(72px - (1024px - 100vw) * (30 / 256));
+    line-height: calc(76px - (1024px - 100vw) * (30 / 256));
   }
 }
 
 @media screen and (max-width: 768px) {
   .place__title {
     max-width: 340px;
-    font-size: 42px;
-    line-height: 46px;
+    font-size: calc(42px - (768px - 100vw) * (10 / 448));
+    line-height: calc(46px - (768px - 100vw) * (11 / 448));
   }
 }
 
 @media screen and (max-width: 320px) {
   .place__title {
     max-width: 288px;
-    font-size: 32px;
-    line-height: 35px;
-    padding:0 16px;
+    padding: 0 16px;
   }
 }
