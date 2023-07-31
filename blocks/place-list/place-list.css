@@ -37,14 +37,20 @@
 
 @media screen and (max-width: 768px) {
   .place-list {
-    padding: 88px 24px 90px;
+    padding-top: 88px;
+    padding-bottom: 90px;
+    padding-left: 24px;
+    padding-right: 24px;
     row-gap: 73px;
   }
 }
 
 @media screen and (max-width: 600px) {
   .place-list {
-    padding: 64px 0px 66px;
+    padding-top: 64px;
+    padding-bottom: 66px;
+    padding-left: 0;
+    padding-right: 0;
     row-gap: 50px;
   }
 }

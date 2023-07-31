@@ -9,22 +9,15 @@
 }
 
 
-@media screen and (max-width: 1024px) {
-    .intro {
-      padding-left: 48px;
-    }
+
+@media screen and (max-width: 768px) {
+  .intro {
+    max-width: 720px;
   }
-  
-  @media screen and (max-width: 768px) {
-    .intro {
-      max-width: 720px;
-      padding-left: 24px;
-    }
+}
+
+@media screen and (max-width: 320px) {
+  .intro {
+    max-width: 284px;
   }
-   
-  @media screen and (max-width: 320px) {
-    .intro {
-      max-width: 284px;
-      padding-left: 16px;
-    }
-  }
+}

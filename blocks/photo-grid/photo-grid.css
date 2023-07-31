@@ -1,5 +1,7 @@
 .photo-grid {
-  padding: 92px 48px 0;
+  padding-top: 92px;
+  padding-left: 48px;
+  padding-right: 48px;
   display: grid;
   margin: 0 auto;
   grid-template-columns: repeat(auto-fit, minmax(284px, 1fr));
@@ -10,21 +12,42 @@
 @media screen and (max-width: 1024px) {
   .photo-grid {
     gap: 14px;
+    padding-left: calc(48px - (1024px - 100vw) * (24 / 256));
+    padding-right: calc(48px - (1024px - 100vw) * (24 / 256));
+    /*
+    Плавное изменение размера left и right padding
+    При изменении разрешения с 1024px до 768px (1024px - 768px) = 256px
+    left и right padding уменьшается с 48px до 24px, разница составляет(48px - 24px) = 24px
+    (24 / 448) - коэффициент изменения отступа при уменьшении разрешения на 1px
+    (1024px - 100vw) - дельта, на которую изменилось разрешение
+    (1024px - 100vw) * (24 / 256) - дельта, на которую изменился размер отступа
+    (48px - (1024px - 100vw) * (24 / 256)) - величина отступа
+    */
   }
 }
 
 @media screen and (max-width: 768px) {
   .photo-grid {
-    padding: calc(88px - (768px - 100vw) * (24/ 448)) 24px 0;
+    padding-top: calc(88px - (768px - 100vw) * (24 / 448));
     /*
     Плавное изменение размера top padding
-    При изменении разрешения с 768px до 320px (768px -  320px) = 448px
-    top padding
+    При изменении разрешения с 768px до 320px (768px - 320px) = 448px
     top padding уменьшается с 88px до 64px, разница составляет(88px - 64px) = 24px
     (24 / 448) - коэффициент изменения отступа при уменьшении разрешения на 1px
     (768px - 100vw) - дельта, на которую изменилось разрешение
     (768px - 100vw) * (24 / 448) - дельта, на которую изменился размер отступа
     (88px - (768px - 100vw) * (24/ 448)) - величина отступа
+    */
+    padding-left: calc(24px - (768px - 100vw) * (8 / 448));
+    padding-right: calc(24px - (768px - 100vw) * (8 / 448));
+    /*
+    Плавное изменение размера left и right padding
+    При изменении разрешения с 768px до 320px (768px - 320px) = 448px
+    left и right padding уменьшается с 24px до 16px, разница составляет(24px - 16px) = 8px
+    (8 / 448) - коэффициент изменения отступа при уменьшении разрешения на 1px
+    (768px - 100vw) - дельта, на которую изменилось разрешение
+    (768px - 100vw) * (8 / 448) - дельта, на которую изменился размер отступа
+    (24px - (768px - 100vw) * (8 / 448)) - величина отступа
     */
     gap: 16px;
   }
@@ -32,7 +55,6 @@
 
 @media screen and (max-width: 320px) {
   .photo-grid {
-    padding: 64px 16px 0;
     gap: 12px;
   }
 }
