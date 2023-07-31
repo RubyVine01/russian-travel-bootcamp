@@ -4,15 +4,17 @@
   justify-content: space-between;
   align-items: start;
   margin: 0;
-  padding: 28px 48px 0;
+  padding-top: 28px;
+  padding-left: 48px;
+  padding-right: 48px;
 }
 
 @media screen and (max-width: 1024px) {
   .header {
     max-width: 928px;
-    padding: 28px calc(48px - (1024px - 100vw) * (24 / 256)) 0;
+    padding-left: calc(48px - (1024px - 100vw) * (24 / 256));
+    padding-right: calc(48px - (1024px - 100vw) * (24 / 256));
     /*
-    Плавное изменение размеров left и right padding
     При изменении разрешения с 928px до 768px (928px - 768px) = 256px
     left и right padding уменьшаются с 48px до 24px, разница составляет(48px - 24px) = 24px
     (24 / 256) - коэффициент изменения отступа при уменьшении разрешения на 1px
@@ -26,17 +28,16 @@
 @media screen and (max-width: 768px) {
   .header {
     max-width: 720px;
-    padding: calc(28px - (768px - 100vw) * (12 / 448));
-    /*
-    Плавное изменение размеров top, left и right padding
-    При изменении разрешения с 768px до 320px (768px -  320px) = 448px
-    top padding
+    padding-top: calc(28px - (768px - 100vw) * (12 / 448));
+    /*При изменении разрешения с 768px до 320px (768px -  320px) = 448px
     top padding уменьшается с 28px до 16px, разница составляет(28px - 16px) = 12px
     (12 / 448) - коэффициент изменения отступа при уменьшении разрешения на 1px
     (768px - 100vw) - дельта, на которую изменилось разрешение
     (768px - 100vw) * (12 / 448) - дельта, на которую изменился размер отступа
-    (28px - (768px - 100vw) * (12/ 448)) - величина отступа
-    left и right padding
+    (28px - (768px - 100vw) * (12/ 448)) - величина отступа*/
+    padding-left: calc(24px - (768px - 100vw) * (8 / 448));
+    padding-right: calc(24px - (768px - 100vw) * (8 / 448));
+    /*При изменении разрешения с 768px до 320px (768px -  320px) = 448px
     left и right padding уменьшаются с 24px до 16px, разница составляет(24px - 16px) = 8px
     (8 / 448) - коэффициент изменения отступа при уменьшении разрешения на 1px
     (768px - 100vw) - дельта, на которую изменилось разрешение

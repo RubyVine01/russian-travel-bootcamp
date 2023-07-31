@@ -1,5 +1,5 @@
 .place-list {
-  padding: 92px 148px 92px;
+  padding: 92px calc(148px - (1280px - min(1280px, 100vw)) * (100 / 256)) 92px;
   margin: 0;
   list-style: none;
   display: flex;
@@ -9,19 +9,19 @@
 
 @media screen and (max-width: 1024px) {
   .place-list {
-    padding: 92px 48px 92px;
+    padding: 92px calc(48px - (1024px - 100vw) * (20 / 256)) 92px;
     row-gap: 80px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .place-list {
-    padding: 88px 24px 290px;
+    padding: 88px 24px 90px;
     row-gap: 73px;
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 600px) {
   .place-list {
     padding: 64px 0px 66px;
     row-gap: 50px;

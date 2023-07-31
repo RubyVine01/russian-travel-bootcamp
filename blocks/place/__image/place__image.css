@@ -31,7 +31,7 @@
 
 @media screen and (max-width: 768px) {
   .place__image {
-    width: calc(340px - (768px - 100vw) * (20 / 448));
+    width: calc(340px - (768px - 100vw) * (20 / 218));
     /*
       Изменение ширины
       При изменении разрешения с 768px до 320px (768px - 320px) = 448px
@@ -43,3 +43,11 @@
       */
   }
 }
+
+
+@media screen and (max-width: 550px) {
+    .place__image {
+      width: 100%;
+      
+    }
+  }
