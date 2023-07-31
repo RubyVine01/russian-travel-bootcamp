@@ -9,11 +9,10 @@
   margin: 0 auto;
 }
 
-
 @media screen and (max-width: 768px) {
   .lead__title {
     font-size: calc(96px - (768px - 100vw) * (56 / 448));
-     /*
+    /*
     При изменении разрешения с 768px до 320px (768px -  320px) = 448px
     font-size уменьшается с 96px до 40px, разница составляет(96px - 40px) = 56px   
     (56 / 448) - коэффициент изменения font-size при уменьшении разрешения на 1px
@@ -31,7 +30,6 @@
     (96px - (768px - 100vw) * (56 / 448)) - величина line-height
     */
     max-width: 720px;
-
   }
 }
 
@@ -40,4 +38,3 @@
     max-width: 288px;
   }
 }
- 
