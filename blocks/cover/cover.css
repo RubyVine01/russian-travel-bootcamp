@@ -1,35 +1,42 @@
 .cover {
-  background-image: url(../.././../russian-travel-bootcamp/images/cover__background.png);
-  width: 1184px;
-  height: 740px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  row-gap: 32px;
-  text-decoration: none;
-  position: relative;
   margin: 0 auto;
+  width: calc(1184px - (1280px - min(1280px, 100vw)) * (160 / 256));
+  /*
+  При изменении разрешения с 1280px до 1024px (1280px - 1024px) = 256px
+  width  уменьшается с 1184px до 1024px, разница составляет(1184px - 1024px) = 160px
+  (8 / 256) - коэффициент изменения width  при уменьшении разрешения на 1px
+  min(1280px, 100vw) - разрешние экрана, но не больше величины максимальной точки переламома
+  (1280px -  min(1280px, 100vw)) - дельта, на которую изменилось разрешение
+  (1280px -  min(1280px, 100vw)) * (160/ 256) - дельта, на которую изменился width
+  1184px - (1280px -  min(1280px, 100vw)) * (160 / 256) - формула для рассчета width  при конкретном разрешении 
+  calc(
+  */
+  height: calc(
+    (1184px - (1280px - min(1280px, 100vw)) * (160 / 256)) * (740 / 1184)
+      /*
+  (740 / 1184) - отношение высоты к ширине
+  width * (740 / 1184) - высота логотипа
+  */
+  );
 }
 
-.cover:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.3;
-  background-color: #2a2c2f;
-}
-
-.cover:hover:before {
-  opacity: 0.8;
-}
-
-
-@media (max-width: 1024px) {
-  
+@media screen and (max-width: 1024px) {
+  .cover {
+    width: 100vw;
+    /*
+    При изменении разрешения с 1024px до 768px (1024px - 768px) = 256px
+    width  уменьшается с 1184px до 1024px, разница составляет(1184px - 1024px) = 160px
+    (8 / 256) - коэффициент изменения width  при уменьшении разрешения на 1px
+    min(1280px, 100vw) - разрешние экрана, но не больше величины максимальной точки переламома
+    (1280px -  min(1024px, 100vw)) - дельта, на которую изменилось разрешение
+    (1280px -  min(1024px, 100vw)) * (160/ 256) - дельта, на которую изменился width
+    1184px - (1280px -  min(1280px, 100vw)) * (160 / 256) - формула для рассчета width  при конкретном разрешении 
+    calc(
+    */
+    height: calc(100vw * (640 / 1024));
+    /*
+   (640 / 1024) - отношение высоты к ширине
+    width * (640 / 1024) - высота логотипа
+    */
+  }
 }

@@ -1,13 +1,40 @@
 .cover__title {
-  width: 560px;
-  height: 152px;
+  max-width: 560px;
   color: #fff;
   text-align: center;
-  font-family: Inter;
   font-size: 72px;
   font-style: normal;
   font-weight: 900;
   line-height: 76px;
-  margin: 0 auto;
+  margin: 0;
   z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .cover__title {
+    font-size: calc(72px - (768px - 100vw) * (40 / 448));
+    /*
+    При изменении разрешения с 768px до 320px (768px - 320px) = 448px
+    font-size уменьшается с 72px до 32px, разница составляет(72px - 32px) = 40px
+    (40 / 448) - коэффициент изменения font-size при уменьшении разрешения на 1px
+    (768px - 100vw) - дельта, на которую изменилось разрешение
+    (768px - 100vw) * (40 / 448) - дельта, на которую изменился font-size
+    (72px - (768px - 100vw) * (40 / 448)) - величина font-size
+    */
+    line-height: calc(76px - (768px - 100vw) * (41 / 448));
+    /*
+    При изменении разрешения с 768px до 320px (768px - 320px) = 448px
+    line-height уменьшается с 76px до 35px, разница составляет(76px - 35px) = 41px
+    (41 / 448) - коэффициент изменения line-height при уменьшении разрешения на 1px
+    (768px - 100vw) - дельта, на которую изменилось разрешение
+    (768px - 100vw) * (41 / 448) - дельта, на которую изменился line-height
+    (76px - (768px - 100vw) * (41 / 448)) - величина line-height
+    */
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .cover__title {
+    max-width: 288px;
+  }
 }

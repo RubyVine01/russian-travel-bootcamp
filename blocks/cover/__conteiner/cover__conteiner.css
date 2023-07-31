@@ -1,0 +1,30 @@
+.cover__conteiner {
+  background-image: url(../../.././../russian-travel-bootcamp/images/cover__background.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 32px;
+  text-decoration: none;
+  position: relative;
+  margin: 0;
+}
+
+.cover__conteiner:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background-color: #2a2c2f;
+}
+
+.cover__conteiner:hover:before {
+  opacity: 0.8;
+}
