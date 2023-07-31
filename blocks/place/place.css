@@ -2,12 +2,29 @@
   display: grid;
   grid-template-columns: 460fr 488fr;
   column-gap: calc(40px - (1280px - min(1280px, 100vw)) * (8 / 256));
+  /*
+  При изменении разрешения с 1280px до 1024px (1280px - 1024px) = 256px
+  column-gap уменьшается с 40px до 32px, разница составляет(40px - 32px) = 8px
+  (8px / 256px) - коэффициент изменения column-gap при уменьшении разрешения на 1px
+  min(1280px, 100vw) - разрешние экрана, но не больше величины максимальной точки переламома
+  (1280px - 100vw) - дельта, на которую изменилось разрешение
+  (1280px - 100vw) * (8 / 256) - дельта, на которую измениллась column-gap
+  40px - (1280px - min(1280px, 100vw)) * (8 / 256) - формула для рассчета column-gap при конкретном разрешении 
+  */
   row-gap: 48px;
 }
 
 @media screen and (max-width: 1024px) {
   .place {
     column-gap: calc(32px - (1024px - 100vw) * (4 / 256));
+    /*
+    При изменении разрешения с 1024px до 768px (1280px - 768px) = 256px
+    column-gap уменьшается с 32px до 28px, разница составляет(32px - 28px) = 4px
+    (4px / 256px) - коэффициент изменения column-gap при уменьшении разрешения на 1px
+    (1024px - 100vw) - дельта, на которую изменилось разрешение
+    (1024px - 100vw) * (4 / 256) - дельта, на которую измениллась column-gap
+    32px - (1024px - 100vw) * (4 / 256) - формула для рассчета column-gap при конкретном разрешении 
+    */
     grid-template-columns: 440fr 456fr;
   }
 }
@@ -16,19 +33,26 @@
   .place {
     column-gap: 28px;
     row-gap: calc(48px - (768px - 100vw) * (16 / 448));
+    /*
+    При изменении разрешения с 768px до 550px (768px - 550px) = 448px
+    row-gap уменьшается с 48px до 32px, разница составляет(48px - 32px) = 16px
+    (16px / 448px) - коэффициент изменения row-gap при уменьшении разрешения на 1px
+    (768px - 100vw) - дельта, на которую изменилось разрешение
+    (768px - 100vw) * (16 / 448) - дельта, на которую измениллась row-gap
+    48px - (768px - 100vw) * (16 / 448) - формула для рассчета row-gap при конкретном разрешении 
+    */
     grid-template-columns: 340fr 352fr;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 626px) {
   .place {
     grid-template-columns: 100%;
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 425px) {
   .place {
     row-gap: 32px;
   }
 }
- 

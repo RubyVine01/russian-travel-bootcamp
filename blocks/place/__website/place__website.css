@@ -5,7 +5,6 @@
   flex-direction: column;
   justify-content: end;
   row-gap: 12px;
-
 }
 
 @media screen and (max-width: 1024px) {
@@ -20,10 +19,9 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 425px) {
   .place__website {
     max-width: 280px;
-    padding:0 16px;
+    padding: 0 16px;
   }
 }
- 
