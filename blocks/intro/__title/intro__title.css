@@ -11,7 +11,15 @@
 
 @media screen and (max-width: 768px) {
   .intro__title {
-    padding-top: 88px;
+    padding-top: calc(88px - (768px - 100vw) * (24 / 448));
+    /*
+      При изменении разрешения с 768px до 320px (768px - 320px) = 448px
+      padding-top уменьшается с 88px до 64px, разница составляет(88px - 64px) = 24px
+      (24 / 448) - коэффициент изменения padding-top при уменьшении разрешения на 1px
+      (768px - 100vw) - дельта, на которую изменилось разрешение
+      (768px - 100vw) * (24/ 448) - дельта, на которую изменился padding-top
+      (88px - (768px - 100vw) * (24 / 448)) - величина padding-top
+      */
     max-width: 720px;
     font-size: calc(54px - (768px - 100vw) * (22 / 448));
     /*
@@ -37,6 +45,5 @@
 @media screen and (max-width: 320px) {
   .intro__title {
     max-width: 288px;
-    padding-top: 64px;
   }
 }

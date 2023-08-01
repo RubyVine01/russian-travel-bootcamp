@@ -1,5 +1,5 @@
 .cover__conteiner {
-  background-image: url(../../.././../russian-travel-bootcamp/images/cover__background.png);
+  background-image: url(../.././../images/cover__background.png);
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
@@ -12,6 +12,7 @@
   text-decoration: none;
   position: relative;
   margin: 0;
+  background-position: center;
 }
 
 .cover__conteiner:before {
@@ -23,7 +24,7 @@
   height: 100%;
   opacity: 0.3;
   background-color: #2a2c2f;
-}
+} 
 
 .cover__conteiner:hover:before {
   opacity: 0.8;
