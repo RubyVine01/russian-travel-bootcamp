@@ -5,8 +5,13 @@
   margin: 0;
   background-size: contain;
   background-repeat: no-repeat;
+  text-decoration: none;
 }
 
+
+.header__logo:hover {
+  opacity: 0.8;
+}
 @media screen and (max-width: 768px) {
   .header__logo {
     width: calc(176px - (768px - 100vw) * (34 / 448));

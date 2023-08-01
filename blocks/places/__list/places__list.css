@@ -1,4 +1,4 @@
-.place-list {
+.places__list {
   padding-top: 92px;
   padding-bottom: 92px;
   padding-left: calc(148px - (1280px - min(1280px, 100vw)) * (100 / 256));
@@ -20,7 +20,7 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .place-list {
+  .places__list {
     padding-left: calc(48px - (1024px - 100vw) * (20 / 256));
     padding-right: calc(48px - (1024px - 100vw) * (20 / 256));
     /*
@@ -36,7 +36,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .place-list {
+  .places__list {
     padding-top: 88px;
     padding-bottom: 90px;
     padding-left: 24px;
@@ -46,7 +46,7 @@
 }
 
 @media screen and (max-width: 626px) {
-  .place-list {
+  .places__list {
     padding-left: calc(24px - (768px - 100vw) * (8 / 448));
     padding-right: calc(24px - (768px - 100vw) * (8 / 448));
     /*Размер отступов при изменении разрешения с 626px до 425px взят из блока photo-grid  для симметричности*/
@@ -54,7 +54,7 @@
 }
 
 @media screen and (max-width: 425px) {
-  .place-list {
+  .places__list {
     padding-top: 64px;
     padding-bottom: 66px;
     padding-left: 0;
