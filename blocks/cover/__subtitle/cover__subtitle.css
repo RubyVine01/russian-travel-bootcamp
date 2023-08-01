@@ -12,7 +12,6 @@
 
 @media screen and (max-width: 768px) {
   .cover__subtitle {
-    max-width: 288px;
     font-size: calc(18px - (768px - 100vw) * (4 / 448));
     /*
     При изменении разрешения с 768px до 320px (768px - 320px) = 448px

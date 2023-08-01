@@ -40,7 +40,6 @@
       */
     padding-left: calc(24px - (768px - 100vw) * (8 / 448));
     padding-right: calc(24px - (768px - 100vw) * (8 / 448));
-
     gap: 16px;
   }
 }
