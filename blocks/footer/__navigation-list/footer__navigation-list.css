@@ -6,7 +6,6 @@
   padding-left: 0;
 }
 
-
 @media screen and (max-width: 660px) {
   .footer__navigation-list {
     flex-direction: column;

@@ -1,6 +1,7 @@
 # Проект: Путешествие по России
 
 ## GitHub Pages 
+https://rubyvine01.github.io/russian-travel-bootcamp/
 
 ### Обзор
 * Интро
