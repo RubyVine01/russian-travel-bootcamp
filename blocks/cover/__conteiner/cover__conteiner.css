@@ -29,3 +29,10 @@
 .cover__conteiner:hover:before {
   opacity: 0.8;
 }
+
+
+@media screen and (max-width: 425px) {
+  .cover__conteiner {
+    gap: 16px;
+  }
+}
