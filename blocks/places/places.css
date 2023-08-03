@@ -1,22 +1,72 @@
-.plases {
+.places {
   max-width: 984px;
-  margin: 0 auto;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 80px;
+  padding-top: 92px;
+  padding-bottom: 92px;
+  padding-left: calc(148px - (1280px - min(1280px, 100vw)) * (100 / 256));
+  padding-right: calc(148px - (1280px - min(1280px, 100vw)) * (100 / 256));
+  /*
+  При изменении разрешения с 1280px до 1024px (1280px - 1024px) = 256px
+  left и right padding уменьшаются с 148px до 48px, разница составляет(148px - 48px) = 100px
+  (100 / 256) - коэффициент изменения отступа при уменьшении разрешения на 1px
+  min(1280px, 100vw) - разрешение экрана, но не больше величины максимальной точки перелома
+  (1280px -  min(1280px, 100vw)) - дельта, на которую изменилось разрешение
+  (1280px -  min(1280px, 100vw)) * (100/ 256) - дельта, на которую изменился размер отступа
+  148px - (1280px - 100vw) * (100/ 256) - величина отступа
+  */
 }
 
 @media screen and (max-width: 1024px) {
-  .plases {
+  .places {
     max-width: 928px;
+    padding-left: calc(48px - (1024px - 100vw) * (20 / 256));
+    padding-right: calc(48px - (1024px - 100vw) * (20 / 256));
+    /*
+    При изменении разрешения с 1024px до 768px (1024px - 768px) = 256px
+    left и right padding уменьшаются с 48px до 28px, разница составляет(48px - 28px) = 20px
+    (20 / 256) - коэффициент изменения отступа при уменьшении разрешения на 1px
+    (1024px -  100vw) - дельта, на которую изменилось разрешение
+    (1024px -  100vw) * (20 / 256) - дельта, на которую изменился размер отступа
+    48px - (1024px - min(1024px, 100vw)) * (20 / 256) - величина отступа
+    */
   }
 }
 
 @media screen and (max-width: 768px) {
-  .plases {
+  .places {
     max-width: 720px;
+    row-gap: 73px;
+    padding-top: 88px;
+    padding-bottom: 90px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media screen and (max-width: 626px) {
+  .places {
+    row-gap: 50px;
+    padding-left: calc(24px - (768px - 100vw) * (8 / 448));
+    padding-right: calc(24px - (768px - 100vw) * (8 / 448));
+    /*Размер отступов при изменении разрешения с 626px до 425px взят из блока photo-grid  для симметричности*/
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .places {
+    max-width: 425px;
+    padding-top: 64px;
+    padding-bottom: 66px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .plases {
+  .places {
     max-width: 320px;
   }
 }
