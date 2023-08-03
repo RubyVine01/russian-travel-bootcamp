@@ -13,6 +13,7 @@
   position: relative;
   margin: 0;
   background-position: center;
+  min-height: inherit;
 }
 
 .cover__conteiner:before {
